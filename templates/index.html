@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>kiot-demo</title>
+</head>
+<body>
+<h1>Team Kiot</h1>
+<form  method="post" > {% csrf_token %}
+	<input type="hidden" name="form_name" value="contactform">
+	<input type="text" name="name">
+	<input type="email" name="email">
+	<input type="text" name="subject">
+	<button type="submit"> Button</button>
+	
+</form>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table-Data</title>
+</head>
+<body>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>E-mail</th>
+    <th>subject</th>
+  </tr>
+  {% for i in obj %}
+  <tr>
+    <td>{{i.name}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.subject}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
+</body>
+</html>

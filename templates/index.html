@@ -821,8 +821,67 @@
                     </div>
                 </section>
                 <!-- Basic Inputs end -->
-
               
+                              <!-- Basic Tables start -->
+                <div class="row" id="basic-table">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Table Basic</h4>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                  Kiot-Team Records
+                                </p>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>name</th>
+                                            <th>email</th>
+                                            <th>subject</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    	{% for i in obj %}
+                                        <tr>
+                                            
+                                            <td>{{i.name}}</td>
+                                            <td>{{i.email}}</td>
+                                            <td>{{i.subject}}</td>
+                                         
+                                            
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button type="button" class="btn btn-sm dropdown-toggle hide-arrow" data-toggle="dropdown">
+                                                        <i data-feather="more-vertical"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="javascript:void(0);">
+                                                            <i data-feather="edit-2" class="mr-50"></i>
+                                                            <span>Edit</span>
+                                                        </a>
+                                                        <a class="dropdown-item" href="javascript:void(0);">
+                                                            <i data-feather="trash" class="mr-50"></i>
+                                                            <span>Delete</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        {% endfor %}
+                                           
+                                            
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Basic Tables end -->
 
              
 
